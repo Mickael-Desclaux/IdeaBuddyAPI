@@ -15,7 +15,11 @@
     "noEmit": true,
     "lib": [
       "es2022"
-    ]
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@generated/*": ["generated"]
+    }
   },
   "include": [
     "**/*.ts",

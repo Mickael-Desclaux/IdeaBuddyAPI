@@ -1,6 +1,6 @@
 import { mistral, type MistralLanguageModelOptions } from '@ai-sdk/mistral';
 import { generateText, Output } from 'ai';
-import { NextFunction, Request, Response } from 'express';
+import type { NextFunction, Request, Response } from 'express';
 import z from 'zod';
 
 const model = mistral('mistral-small-latest');

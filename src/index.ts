@@ -1,4 +1,4 @@
-import { Request, Response } from "express"
+import type { Request, Response } from "express"
 import "dotenv/config"
 import express from 'express'
 import { ChatRouter } from "./routes/chat.route"

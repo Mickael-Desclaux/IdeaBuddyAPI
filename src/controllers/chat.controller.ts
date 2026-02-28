@@ -5,7 +5,7 @@ import z from 'zod';
 
 const model = mistral('mistral-small-latest');
 
-export async function testAIResponse(_req: Request, res: Response, next: NextFunction) {
+export async function testAIResponse(req: Request, res: Response, next: NextFunction) {
   try {
     const response = await generateText({
       model,
@@ -20,7 +20,7 @@ export async function testAIResponse(_req: Request, res: Response, next: NextFun
           })
         })
       }),
-      prompt: "Comment faire une tarte aux pommes?",
+      prompt: req.body.input,
       providerOptions: {
         mistral: {
           safePrompt: true,

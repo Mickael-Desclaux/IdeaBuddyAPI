@@ -2,6 +2,7 @@ import { Request, Response } from "express"
 import "dotenv/config"
 import express from 'express'
 import { ChatRouter } from "./routes/chat.route"
+import { errorHandler } from "./middlewares/error.middleware"
 
 const app = express()
 const port = 3000
@@ -13,8 +14,6 @@ app.get('/', (req: Request, res: Response) => {
 
 app.use("/ai", ChatRouter)
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
+app.use(errorHandler)
 
 app.listen(port, () => console.log(`✅ Server is running on port ${port}`));

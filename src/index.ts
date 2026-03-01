@@ -1,9 +1,9 @@
 import type { Request, Response } from "express"
 import "dotenv/config"
 import express from 'express'
-import { errorHandler } from "./middlewares/error.middleware"
 import { ChatRouter } from "./ai-test/chat.route"
 import { IdeaRouter } from "./idea/idea.route"
+import { errorHandler } from "./middlewares/error.middleware"
 
 const app = express()
 const port = 3000

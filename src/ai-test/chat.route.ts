@@ -1,7 +1,7 @@
 import { Router } from "express";
 import { testAIResponse } from "../ai-test/chat.controller";
-import { validateBody } from "../middlewares/validate.middleware";
-import { InputDTOSchema } from "../dtos/input.dto";
+import { validateBody } from "src/middlewares/validate.middleware";
+import { InputDTOSchema } from "src/dtos/input.dto";
 
 const router = Router();
 
